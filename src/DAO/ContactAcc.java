@@ -27,7 +27,7 @@ public class ContactAcc {
                 int contactId = rs.getInt("Contact_ID");
                 String contactName = rs.getString("Contact_Name");
                 String contactEmail = rs.getString("Contact_Email");
-                Contacts contacts = new Countries (contractId, contractName, contactEmail);
+                Contacts contacts = new Countries (contactId, contactName, contactEmail);
                 contactslist.add(contacts);
             }
         } catch (SQLException throwables) {
