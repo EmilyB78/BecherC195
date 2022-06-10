@@ -11,7 +11,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Timestamp;
 
-public class CustomerAcc {
+/*public class CustomerAcc {
 
     public static ObservableList<Customers> getAllCustomers(){
 
@@ -44,5 +44,5 @@ public class CustomerAcc {
 
 }
 
-
+*/
 

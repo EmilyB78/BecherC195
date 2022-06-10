@@ -12,7 +12,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Timestamp;
 
-public class FirstLevelDivAcc {
+/* public class FirstLevelDivAcc {
 
     public static ObservableList<FirstLevelDiv> getAllFirstLevelDiv(){
 
@@ -41,3 +41,4 @@ public class FirstLevelDivAcc {
 
 }
 
+*/

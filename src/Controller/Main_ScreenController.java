@@ -1,4 +1,4 @@
-package Controller;
+/**package Controller;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -14,17 +14,20 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
-import model.InHouse;
-import model.Inventory;
-import model.Part;
-import model.Product;
+import model.Appointments;
+import model.Contacts;
+import model.Countries;
+import model.Customers;
+import model.FirstLevelDiv;
+import model.Reports;
+import model.User;
 
 import java.io.IOException;
 import java.net.URL;
 import java.util.Optional;
 import java.util.ResourceBundle;
 
-public class Main_ScreenController implements Initializable {
+/* public class Main_ScreenController implements Initializable {
 
     Stage stage;
     Parent scene;
@@ -36,7 +39,7 @@ public class Main_ScreenController implements Initializable {
      * @throws IOException From FXMLLoader.
      */
 
-    @FXML
+    /** @FXML
     void onActionDisplayAppointments(ActionEvent event) throws IOException {
         Parent one = FXMLLoader.load(getClass().getResource("/view/Appointments.fxml"));
         Scene scene = new Scene(one);
@@ -54,7 +57,7 @@ public class Main_ScreenController implements Initializable {
      * @throws IOException From FXMLLoader.
      */
 
-    @FXML
+    /**@FXML
     void onActionDisplayCustomers(ActionEvent event) throws IOException {
         Parent one = FXMLLoader.load(getClass().getResource("/view/Customers.fxml"));
         Scene scene = new Scene(one);
@@ -71,7 +74,7 @@ public class Main_ScreenController implements Initializable {
      * @throws IOException From FXMLLoader.
      */
 
-    @FXML
+    /** @FXML
     void onActionDisplayReports(ActionEvent event) throws IOException {
         Parent one = FXMLLoader.load(getClass().getResource("/view/Reports.fxml"));
         Scene scene = new Scene(one);
@@ -88,9 +91,12 @@ public class Main_ScreenController implements Initializable {
      *
      * @param event Exit button action.
      */
-    @FXML
+    /**@FXML
     void onActionExit(ActionEvent event) {
         System.exit(0);
 
     }
 }
+
+
+*/

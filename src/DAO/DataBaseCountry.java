@@ -10,7 +10,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Timestamp;
 
-public class DataBaseCountry {
+/* public class DataBaseCountry {
 
     public static ObservableList<Countries> getAllCountries(){
 
@@ -50,4 +50,6 @@ public class DataBaseCountry {
         }
     }
 }
+
+ */
 

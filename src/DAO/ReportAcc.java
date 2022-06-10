@@ -1,10 +1,7 @@
-package DAO;
+/*package DAO;
 
 import Main.DataBaseCon;
-import Model.Countries;
-import Model.Customers;
-import Model.FirstLevelDiv;
-import Model.Reports;
+import Model.*;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 
@@ -12,6 +9,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Timestamp;
+import java.time.LocalDateTime;
 
 public class ReportAcc {
 
@@ -26,12 +24,18 @@ public class ReportAcc {
 
             ResultSet rs = ps.executeQuery();
             while(rs.next()){
-                String countryName = rs.getString("Country");
-                int countryCount = rs.getInt("countryCount");
-                Reports reports = new Reports (countryName, countryCount);
-
-
-                reportslist.add(reports);
+                int appointmentID = rs.getInt("Appointment_ID");
+                String appointmentTitle = rs.getString("Title");
+                String appointmentDescription = rs.getString("Description");
+                String appointmentLocation = rs.getString("Location");
+                String appointmentType = rs.getString("Type");
+                LocalDateTime start = rs.getTimestamp("Start").toLocalDateTime();
+                LocalDateTime end = rs.getTimestamp("End").toLocalDateTime();
+                int customerID = rs.getInt("Customer_ID");
+                int userID = rs.getInt("User_ID");
+                int contactID = rs.getInt("Contact_ID");
+                Appointments A = new Appointments(appointmentID, appointmentTitle, appointmentDescription, appointmentLocation, appointmentType, start, end, customerID, userID, contactID);
+                reportslist.add(A);
             }
         } catch (SQLException throwables) {
             throwables.printStackTrace();
@@ -42,3 +46,4 @@ public class ReportAcc {
 
 }
 
+*/

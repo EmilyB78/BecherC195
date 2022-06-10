@@ -14,7 +14,7 @@ public class ApptAcc {
 
     public static ObservableList<Appointments> getAllAppointments(){
 
-        ObservableList<Appointments> alist = FXCollections.observableArrayList();
+        ObservableList<Appointments> appointmentslist = FXCollections.observableArrayList();
 
         try {
             String sql  = "SELECT * from appointments";
@@ -34,13 +34,13 @@ public class ApptAcc {
                 int userID = rs.getInt("User_ID");
                 int contactID = rs.getInt("Contact_ID");
                 Appointments A = new Appointments(appointmentID, appointmentTitle, appointmentDescription, appointmentLocation, appointmentType, start, end, customerID, userID, contactID);
-                alist.add(A);
+                appointmentslist.add(A);
             }
         } catch (SQLException throwables) {
             throwables.printStackTrace();
         }
 
-        return alist;
+        return appointmentslist;
     }
     public static int deleteAppointment(int appointmentID, Connection connection) {
 
@@ -59,3 +59,5 @@ public class ApptAcc {
     }
 
 }
+
+

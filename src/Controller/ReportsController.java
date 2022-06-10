@@ -1,6 +1,8 @@
-package controller;
+/*package controller;
 
 
+import DAO.ApptAcc;
+import DAO.ReportAcc;
 import Model.Appointments;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -38,13 +40,13 @@ public class ReportsController implements Initializable {
     /**
      * Table view for the reports.
      */
-    @FXML
+    /*@FXML
     private TableView<Appointments> AppointmentsTableView;
 
     /**
      * The Appointment ID column for the Appointments table.
      */
-    @FXML
+/*  @FXML
     private TableColumn<Appointments, Integer> ApptIdCol; {
     }
 
@@ -87,9 +89,55 @@ public class ReportsController implements Initializable {
     @FXML
     private TableColumn<Appointments, Timestamp> UserIdCol; {      }
 
+    @FXML
+    void onActionMonthly(ActionEvent event) throws IOException{
+            if(Monthly.isSelected()){
+@Override
+public void initialize(URL url,ResourceBundle rb){
+
+        ObservableList<Appointments> aList=FXCollections.observableArrayList();
+
+        ResultSet rs=ReportAcc();
+        ApptIdCol.setCellValueFactory(cellData->{
+        return cellData.getValue().getAppointmentID();
+        });
+        TitleCol.setCellValueFactory(cellData->{
+        return cellData.getValue().getTitle();
+        });
+        DescriptCol.setCellValueFactory(cellData->{
+        return cellData.getValue().getAppointmentDescription();
+        });
+        LocCol.setCellValueFactory(cellData->{
+        return cellData.getValue().getAppointmentLocation();
+        });
+        ContactCol.setCellValueFactory(cellData->{
+        return cellData.getValue().getContactID();
+        });
+        AppointTypeCol.setCellValueFactory(cellData->{
+        return cellData.getValue().getAppointmentType();
+        });
+        StartDateTimeCol.setCellValueFactory(cellData->{
+        return cellData.getValue().getStart();
+        });
+        EndDateTimeCol.setCellValueFactory(cellData->{
+        return cellData.getValue().getEnd();
+        });
+        CustIdCol.setCellValueFactory(cellData->{
+        return cellData.getValue().getCustomerID();
+        });
+        UserIdCol.setCellValueFactory(cellData->{
+        return cellData.getValue().getUserID();
+        });
+
+        }else if(Weekly.isSelected()){
+
+        }
+        }
 
 
+        }
 
 
 }
+*/
 

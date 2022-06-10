@@ -11,7 +11,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Timestamp;
 
-public class UserAcc {
+/* public class UserAcc {
 
     public static int validateUser(String userName, String userPassword ){
 
@@ -63,3 +63,5 @@ public class UserAcc {
 
 
 }
+
+ */
