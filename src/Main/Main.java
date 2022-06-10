@@ -1,15 +1,12 @@
 package Main;
 
-import DAO.DataBaseCountry;
-import Main.DataBaseCon;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import model.*;
 
-
-import java.io.IOException;
 
 public class Main extends Application{
 
@@ -20,18 +17,21 @@ public class Main extends Application{
         launch(args);
         DataBaseCon.closeConnection();
     }
+    /**
+     * The start method creates the FXML stage and loads the initial scene (Main Screen).
+     *
+     * @param primaryStage
+     * @throws Exception
+     */
 
     @Override
-    public void start(Stage primaryStage) throws Exception {
-        try {
-            Parent root = FXMLLoader.load(getClass().getResource( "sample.fxml"));
-            primaryStage.setTitle ("DataBaseCon");
-            primaryStage.setScene(new Scene (root));
-            primaryStage.show();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+    public void start(Stage primaryStage) throws Exception{
 
+
+        Parent root = FXMLLoader.load(getClass().getResource("/view/Main_Screen.fxml"));
+        primaryStage.setTitle("Main Menu");
+        primaryStage.setScene(new Scene(root));
+        primaryStage.show();
     }
 }
 

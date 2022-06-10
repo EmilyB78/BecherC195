@@ -1,5 +1,7 @@
 package Controller;
 
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -7,20 +9,88 @@ import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
+import javafx.scene.control.*;
+import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.input.KeyEvent;
+import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
+import model.InHouse;
+import model.Inventory;
+import model.Part;
+import model.Product;
 
 import java.io.IOException;
+import java.net.URL;
+import java.util.Optional;
+import java.util.ResourceBundle;
 
 public class Main_ScreenController implements Initializable {
 
+    Stage stage;
+    Parent scene;
 
+    /**
+     * Loads the Appointments controller.
+     *
+     * @param event Add button action.
+     * @throws IOException From FXMLLoader.
+     */
 
     @FXML
-    void onActionDisplay
+    void onActionDisplayAppointments(ActionEvent event) throws IOException {
+        Parent one = FXMLLoader.load(getClass().getResource("/view/Appointments.fxml"));
+        Scene scene = new Scene(one);
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+
+        stage.setScene(scene);
+
+        stage.show();
+    }
+
+    /**
+     * Loads the Customers controller.
+     *
+     * @param event Add button action.
+     * @throws IOException From FXMLLoader.
+     */
 
     @FXML
-    void onActionExit (ActionEvent event){
+    void onActionDisplayCustomers(ActionEvent event) throws IOException {
+        Parent one = FXMLLoader.load(getClass().getResource("/view/Customers.fxml"));
+        Scene scene = new Scene(one);
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+
+        stage.setScene(scene);
+
+        stage.show();
+    }
+    /**
+     * Loads the Customers controller.
+     *
+     * @param event Add button action.
+     * @throws IOException From FXMLLoader.
+     */
+
+    @FXML
+    void onActionDisplayReports(ActionEvent event) throws IOException {
+        Parent one = FXMLLoader.load(getClass().getResource("/view/Reports.fxml"));
+        Scene scene = new Scene(one);
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+
+        stage.setScene(scene);
+
+        stage.show();
+    }
+
+
+    /**
+     * Exits the program.
+     *
+     * @param event Exit button action.
+     */
+    @FXML
+    void onActionExit(ActionEvent event) {
         System.exit(0);
+
     }
 }

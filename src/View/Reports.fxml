@@ -1,14 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="View.Reports"
-            prefHeight="400.0" prefWidth="600.0">
-
+<AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.FirstScreen">
+    <children>
+        <AnchorPane prefHeight="448.0" prefWidth="767.0">
+            <children>
+                <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#c5d0db" height="434.0" layoutX="14.0" layoutY="14.0" stroke="BLACK" strokeType="INSIDE" width="740.0" />
+                <TableView fx:id="AppointmentsTableView" layoutX="21.0" layoutY="54.0" prefHeight="324.0" prefWidth="711.0">
+                    <columns>
+                        <TableColumn fx:id="ApptIdCol" prefWidth="90.33333015441895" text="Appointment" />
+                        <TableColumn fx:id="TitleCol" prefWidth="35.33332061767578" text="Title" />
+                        <TableColumn fx:id="DescriptCol" prefWidth="76.0" text="Description" />
+                        <TableColumn fx:id="LocCol" prefWidth="59.66667175292969" text="Location" />
+                        <TableColumn fx:id="ContactCol" minWidth="0.0" prefWidth="50.0" text="Contact" />
+                        <TableColumn fx:id="AppointTypeCol" prefWidth="35.33331298828125" text="Type" />
+                        <TableColumn fx:id="StartDateTimeCol" prefWidth="114.99996948242188" text="Start Date &amp; Time" />
+                        <TableColumn fx:id="EndDateTimeCol" prefWidth="105.33328247070312" text="End Date &amp; Time" />
+                        <TableColumn fx:id="CustIdCol" text="Customer ID" />
+                        <TableColumn fx:id="UserIdCol" prefWidth="72.66668701171875" text="User ID" />
+                    </columns>
+                </TableView>
+                <ScrollBar layoutX="21.0" layoutY="378.0" prefHeight="15.0" prefWidth="711.0" />
+                <ScrollBar layoutX="732.0" layoutY="51.0" orientation="VERTICAL" prefHeight="330.0" prefWidth="15.0" />
+                <Label layoutX="22.0" layoutY="20.0" prefHeight="24.0" prefWidth="272.0" text="Appointments">
+                    <font>
+                        <Font name="Book Antiqua Bold" size="20.0" />
+                    </font></Label>
+                <RadioButton fx:id="Weekly" layoutX="658.0" layoutY="25.0" mnemonicParsing="false" onAction="#onActionWeekly" text="Weekly">
+                    <toggleGroup>
+                        <ToggleGroup fx:id="ReportsTG" />
+                    </toggleGroup>
+                </RadioButton>
+                <RadioButton fx:id="monthly" layoutX="549.0" layoutY="25.0" mnemonicParsing="false" onAction="#onActionMonthly" text="Monthly" toggleGroup="$ReportsTG" />
+            </children></AnchorPane>
+    </children>
 </AnchorPane>
