@@ -1,17 +1,5 @@
 package DAO;
 
-import Main.DataBaseCon;
-import Model.Countries;
-import Model.Customers;
-import Model.FirstLevelDiv;
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
-
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Timestamp;
-
 /* public class FirstLevelDivAcc {
 
     public static ObservableList<FirstLevelDiv> getAllFirstLevelDiv(){

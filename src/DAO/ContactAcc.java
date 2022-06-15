@@ -1,16 +1,5 @@
 package DAO;
 
-import Main.DataBaseCon;
-import Model.Contacts;
-import Model.Countries;
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
-
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Timestamp;
-
 /**public class ContactAcc {
 
     public static ObservableList<Contacts> getAllContacts(){

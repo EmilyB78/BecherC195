@@ -1,6 +1,6 @@
 /*package DAO;
 
-import Main.DataBaseCon;
+import Util.DataBaseCon;
 import Model.*;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;

@@ -1,26 +1,21 @@
 package DAO;
-
-import Main.DataBaseCon;
-import Model.Appointments;
-import Model.Countries;
-import javafx.collections.FXCollections;
+import Util.DataBaseCon;
 import javafx.collections.ObservableList;
 
-import java.sql.*;
+import java.sql.SQLException;
 import java.time.LocalDateTime;
 
-public class ApptAcc {
+import javafx.collections.FXCollections;
+import model.Appointments;
 
+import java.sql.*;
 
+public class DAOAppointments {
     public static ObservableList<Appointments> getAllAppointments(){
-
         ObservableList<Appointments> appointmentslist = FXCollections.observableArrayList();
-
         try {
             String sql  = "SELECT * from appointments";
-
             PreparedStatement ps = DataBaseCon.getConnection().prepareStatement(sql);
-
             ResultSet rs = ps.executeQuery();
             while(rs.next()){
                 int appointmentID = rs.getInt("Appointment_ID");
@@ -39,25 +34,22 @@ public class ApptAcc {
         } catch (SQLException throwables) {
             throwables.printStackTrace();
         }
-
         return appointmentslist;
     }
     public static int deleteAppointment(int appointmentID, Connection connection) {
-
+        int result = 0;
         try {
             String sql = "DELETE FROM appointments where Appointment_ID =? ";
             PreparedStatement ps = DataBaseCon.getConnection().prepareStatement(sql);
             ps.setInt(1, appointmentID);
-            int result = ps.executeUpdate();
+            result = ps.executeUpdate();
             ps.close();
-
         } catch (SQLException throwables) {
             throwables.printStackTrace();
         }
-
         return result;
     }
-
 }
+
 
 

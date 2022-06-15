@@ -1,16 +1,5 @@
 package DAO;
 
-import Main.DataBaseCon;
-import Model.Countries;
-import Model.Customers;
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
-
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Timestamp;
-
 /*public class CustomerAcc {
 
     public static ObservableList<Customers> getAllCustomers(){
